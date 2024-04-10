@@ -1,0 +1,8 @@
+docker ps
+docker exec -it d2c bash
+redis-cli KEYS * (returns an empty array)
+redis-cli KEYS a* (returns "added_todos")
+redis-cli GET added_todos
+redis-cli SET added_todos 9001
+redis-cli GET added_todos
+redis-cli DEL added_todos
